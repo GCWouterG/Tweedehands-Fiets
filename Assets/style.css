@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+input[type=submit]{
+	width: 120px;
+	height: 40px;
+	font-size: 26px;
+	color: white;
+	background-color: #FF7D00;
+	border: 0;
+}
+
+input[type=email]{
+	width: 300px;
+	height: 30px;
+	font-size: 26px;
+
+}
+
+.footer{
+	background-color: #0047B3;
+	width: 100%;
+	height: 250px;
+}
+
+.footerTop{
+	width: 33%;
+	height: 250px;
+	color: white;
+	float: left;
+}
+
+.footerTop h2{
+	margin: 32px 0px 0px 40px;
+	display: inline-block;
+}
+
+.footerTop p{
+	margin-left: 60px;
+	display: table;
+}
+
+.footerTopEmail{
+	margin-left: 60px;
+	display: table;
+}
+
+
+.footerDivider{
+	height: 185px;
+	width: 1px;
+	margin-top: 35px;
+	background-color: #7EA2D9;
+	float: right;
+}
+
+.footerBottom{
+	background-color: #0066FF;
+	width: 100%;
+	height: 65px;
+}
+
+.footerBottom h2{
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 15px;
+}
