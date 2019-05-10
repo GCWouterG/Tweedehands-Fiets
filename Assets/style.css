@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+body{margin: 0; padding: 0;}
 .btn-primary {
 	background-color: #0066FF;
 	transition: 0.3s;
@@ -102,17 +103,6 @@
 	display: block;
 }
 
-@media screen and (min-width: 992px) {
-	#mobileToggler, #mobileNavbar {display: none;}
-	#lowerNavbar form, #lowerNavbar #cart {display: block;}
-	#upperNavbar {display: block;}
-	#lowerNavbar img {height: 70%; margin: 0.75% 1%;}
-	#lowerNavbar {height: 65px;}
-}
-
-body{margin: 0; padding: 0;}
-
-
 /*Footer*/
 #upperFooter {
 	background-color: #0047B3;
@@ -163,13 +153,24 @@ body{margin: 0; padding: 0;}
 	color: white;
 	padding: 0.7% 0;
 }
+
+/*Media query's*/
 @media screen and (max-width: 600px) {
 	#upperFooter .col {
 		min-width: 50%;
 	}
 }
+
 @media screen and (min-width: 601px) {
 	#upperFooter .verticalLine {
 		display: block;
 	}
+}
+
+@media screen and (min-width: 992px) {
+	#mobileToggler, #mobileNavbar {display: none;}
+	#lowerNavbar form, #lowerNavbar #cart {display: block;}
+	#upperNavbar {display: block;}
+	#lowerNavbar img {height: 70%; margin: 0.75% 1%;}
+	#lowerNavbar {height: 65px;}
 }
