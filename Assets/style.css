@@ -103,6 +103,47 @@ body{margin: 0; padding: 0;}
 	display: block;
 }
 
+/*main / homepage*/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI";
+	color: #0066FF;
+}
+
+#banner {
+	background-image: url("images/banner.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+#perfectBike {
+	margin: 25px;
+	height: 85%;
+	width: 48%;
+	background-color: #FFFFFF;
+	border-radius: 67px;
+	position: absolute;
+	top: 0;
+	float: left;
+	border: 1px solid #0066FF;
+}
+
+#perfectBike fieldset {
+	border: 1px solid #0066FF;
+	margin: 25px;
+	width: 93%;
+	height: auto;
+	border-radius: 67px;
+}
+
+#perfectBike legend {
+	margin: 0 0 0 60px;
+}
+
 /*Footer*/
 #upperFooter {
 	background-color: #0047B3;
@@ -153,6 +194,7 @@ body{margin: 0; padding: 0;}
 	color: white;
 	padding: 0.7% 0;
 }
+
 
 /*Media query's*/
 @media screen and (max-width: 600px) {
