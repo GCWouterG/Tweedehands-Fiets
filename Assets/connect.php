@@ -2,7 +2,7 @@
 	$dbHost = "localhost";
 	$dbUser = "root";
 	$dbPass = "";
-	$dbName = "fietsen_site";
+	$dbName = "tweedehands_fiets";
 	
 	$conn = new Mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
