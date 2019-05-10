@@ -1,12 +1,21 @@
 @charset "utf-8";
 /* CSS Document */
-body{margin: 0; padding: 0;}
+
+/*Main*/
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI";
+	color: #0066FF;
+}
 .btn-primary {
 	background-color: #0066FF;
 	transition: 0.3s;
 	-webkit-transition: 0.3s;
 }
 .btn-primary:hover {background-color: #0052cc;}
+#main {min-height: 54vh;}
+.row {margin: 0!important;}
 
 /*Navbar / header*/
 #header {border-bottom: 1.5px solid #e6e6e6;}
@@ -103,18 +112,11 @@ body{margin: 0; padding: 0;}
 	display: block;
 }
 
-/*main / homepage*/
-body {
-	margin: 0;
-	padding: 0;
-	font-family: "Segoe UI";
-	color: #0066FF;
-}
-
+/* Banner */
 #banner {
 	background-image: url("images/banner.jpg");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -136,12 +138,47 @@ body {
 	border: 1px solid #0066FF;
 	margin: 25px;
 	width: 93%;
-	height: auto;
 	border-radius: 67px;
+	height: 55vh;
+	display: grid;
 }
 
 #perfectBike legend {
-	margin: 0 0 0 60px;
+    margin: 0 0 0 40px;
+    padding: 0 2%;
+    width: 40%;
+    color: #0066FF;
+}
+#perfectBike table {
+	margin: 4% 0 0 5%;
+	width: 90%;
+}
+#perfectBike td {width: 50%; padding-right: 2%;}
+#perfectBike td select {
+	padding: 4% 2%;
+	margin: 0 0 10% 1%;
+	font-size: 20px;
+	height: auto;
+}
+#perfectBike input[type=submit] {
+	width: 100%;
+	background-color: #0066FF;
+	color: white;
+	border: none;
+	height: 6vh;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 3vh;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+#perfectBike input[type=submit]:hover {background-color: #0052cc;}
+
+/* Homepage content*/
+.row h1 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #0066FF;
 }
 
 /*Footer*/
