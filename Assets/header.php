@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	
-	$pageTitle = "{title}";
-	$_SESSION['loggedIn'] = true;
 ?>
 <!doctype html>
 <html>
