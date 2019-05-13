@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include('Assets/connect.php');
 ?>
 <!doctype html>
 <html>
@@ -10,7 +11,8 @@
 	<meta name="Keywords" content="tweedehands, fiets, tweedehands fiets, fietsen, goedkoop">
 	
 	<title><?php echo $pageTitle;?> | Tweedehands Fiets B.V.</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="Assets/style.css">
+	<link rel="icon" href="Assets/images/favicon.png">
 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,7 +31,7 @@
 			</div>	
 		</nav>
 		<nav id="lowerNavbar">
-			<a href=""><img src="images/logo.png" alt="logo"></a>
+			<a href=""><img src="Assets/images/logo.png" alt="logo"></a>
 			<div id="lowerNavbarWrapper">
 				<form class="form-inline">
 				  <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Search">
