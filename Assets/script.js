@@ -3,9 +3,13 @@ if($(window) >= 992) {
 }
 
 $("#mobileToggler").click(function() {
-	$("#mobileNavbar").slideToggle();
+	$("#mobileNavbar").slideToggle("linear");
 });
 
 $(".dropdownToggler").click(function() {
-	$(".mobileDropdown").slideToggle();
+	$(".mobileDropdown").slideToggle("linear");
+});
+
+$(document).on('input', '#ratingSlider', function() {
+    $('#ratingLiveScore').html(Math.round($(this).val() * 10) / 10);
 });

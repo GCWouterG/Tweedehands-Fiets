@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	include('Assets/connect.php');
+
+
+	$getCategorysQuery = "SELECT * FROM categorieen";
+	$getCategorys = $conn->query($getCategorysQuery);
 ?>
 <!doctype html>
 <html>
@@ -8,6 +13,7 @@
 	<meta name="author" content="Graafschap College">
 	<meta name="Description" content="Tweedehands fietsensite - SCRUM project">
 	<meta name="Keywords" content="tweedehands, fiets, tweedehands fiets, fietsen, goedkoop">
+	<meta name="viewport" content="inital-scale=1 width=device-width">
 	
 	<title><?php echo $pageTitle;?> | Tweedehands Fiets B.V.</title>
 	<link rel="stylesheet" type="text/css" href="Assets/style.css">
@@ -45,16 +51,11 @@
 				<li><a href="">Winkelwagen</a></li>
 				<li><a class="dropdownToggler">Categorieën</a>
 					<ul class="mobileDropdown">
-						<li><a href="">Mannen fietsen</a></li>
-						<li><a href="">Vrouwen fietsen</a></li>
-						<li><a href="">Kinder fietsen</a></li>
-						<li><a href="">Unisex fietsen</a></li>
-						<li><a href="">Vouw fietsen</a></li>
-						<li><a href="">Elektrische mannen fietsen</a></li>
-						<li><a href="">Elektrische vrouwen fietsen</a></li>
-						<li><a href="">Driewiel fietsen</a></li>
-						<li><a href="">Lig fietsen</a></li>
-						<li><a href="">Tandem fietsen</a></li>
+						<?php 
+							foreach($getCategorys as $value) {
+								echo "<li><a href='category.php?id={$value['categorieID']}'>{$value['categorieNaam']}</a></li>";	
+							}
+						?>
 					</ul>
 				</li>
 			</ul>

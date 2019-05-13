@@ -112,20 +112,20 @@ body{
 	display: block;
 }
 
-/* Banner */
+/* Homepage */
 #banner {
 	background-image: url("images/banner.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: auto;
+	height: 55vh;
 	position: relative;
 }
-
+#banner img {display: none;}
 #perfectBike {
-	margin: 25px;
+	margin: 5%;
 	height: 85%;
-	width: 48%;
+	width: 90%;
 	background-color: #FFFFFF;
 	border-radius: 67px;
 	position: absolute;
@@ -136,7 +136,7 @@ body{
 
 #perfectBike fieldset {
 	border: 1px solid #0066FF;
-	margin: 25px;
+	margin: 4%;
 	width: 93%;
 	border-radius: 67px;
 	display: grid;
@@ -146,8 +146,10 @@ body{
 #perfectBike legend {
     margin: 0 0 0 40px;
     padding: 0 2%;
-    width: 40%;
+    width: 75%;
     color: #0066FF;
+	font-size: 1.2em;
+	text-align: center;
 }
 #perfectBike table {
 	margin: 0 auto;
@@ -174,21 +176,42 @@ body{
 }
 #perfectBike input[type=submit]:hover {background-color: #0052cc;}
 
-/* Homepage content*/
+
 #homepageContent {margin: 1% 0!important;}
-.row h1 {
+#homepageContent h1 {
 	font-size: 30px;
 	font-weight: bold;
 	color: #0066FF;
 }
-#homepageBikesWrapper {width: 100%;}
+.homepageBikesWrapper {
+	width: inherit;
+}
+.homepageLeft {
+	width: 100%;
+	float: left;
+	position: relative;
+	padding: 0 2%;
+}
+.homepageRight {
+	float: right;
+	width: 100%;
+	position: relative;
+}
+#homepageCategory {
+	display: none;
+}
+#rating {
+	background-color: #0066FF;
+	color: white;
+	width: 100vw;
+}
+
 .homepageBike {
-	width: 30%;
-/*	border: 1px solid #707070;*/
-	height: 43vh;
-	display: inline-block;
+	width: 90%;
+	border: 1px solid #707070;
 	padding: 2vh 1%;
-	background-color: #f2f2f2;
+	margin: 0 5%;
+	display: inline-block;
 }
 .homepageBike img {
 	max-width: 80%;
@@ -222,6 +245,39 @@ body{
 	padding: 1.5% 3%;
 	position: relative;
 	right: 1%;
+}
+
+#homepageCategory ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#homepageCategory li {
+	width: 100%;
+	text-align: center;
+}
+#homepageCategory a {
+	text-decoration: none;
+}
+#rating img {
+	height: 10%;
+}
+#rating {
+	padding: 5% 7.5%;
+	height: 90vh;
+	font-weight: bold;
+}
+#rating label {
+	font-size: 1.3em;
+}
+#rating input[type=range] {
+	width: 80%;
+}
+#rating input[type=text], #rating textarea {
+	width: 80%;
+}
+#rating textarea {
+	resize: none;
 }
 
 /*Footer*/
@@ -278,15 +334,11 @@ body{
 
 /*Media query's*/
 @media screen and (max-width: 600px) {
-	#upperFooter .col {
-		min-width: 50%;
-	}
+	#upperFooter .col {min-width: 90%;}
 }
 
 @media screen and (min-width: 601px) {
-	#upperFooter .verticalLine {
-		display: block;
-	}
+	#upperFooter .verticalLine {display: block;}
 }
 
 @media screen and (min-width: 992px) {
@@ -295,4 +347,27 @@ body{
 	#upperNavbar {display: block;}
 	#lowerNavbar img {height: 70%; margin: 0.75% 1%;}
 	#lowerNavbar {height: 65px;}
+	
+	#banner {height: auto;}
+	#banner img {width: 100%; display: block;}
+	#perfectBike {width: 50%; margin: 2%;}
+	#perfectBike fieldset {margin: 1% 3.5%;}
+	#perfectBike legend {
+		font-size: 1.5em;
+		width: 45%;
+		text-align: left;
+	}
+	#homepageCategory {display: block;}
+	.homepageLeft {width: 70%;}
+	.homepageRight {width: 30%;}
+	
+	.homepageBike {
+		width: 30%;
+		margin: 0 1.5%;
+	}
+	
+	#rating {
+		height: 90vh;
+		width: 100%;
+	}
 }
