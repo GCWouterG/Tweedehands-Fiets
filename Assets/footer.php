@@ -1,11 +1,14 @@
 	<footer id="upperFooter">
 		<div class="row">
-			<div class="col">
+			<div class="col" id="footerLinks">
 				<h2>Links</h2>
-				<div class="footerDivider"></div>
 				<ul>
-					<li><a href="#">Melden</a></li>
+					<li><a href="#">Probleem melden</a></li>
+					<li><a href="#">Klantenservice</a></li>
+					<li><a href="#">Retourneren</a></li>
 					<li><a href="#">Sitemap</a></li>
+					<li><a href="#">Garantie</a></li>
+					<li><a href="#">Blog</a></li>
 				</ul>
 			</div>
 			<div class="verticalLine"></div>
