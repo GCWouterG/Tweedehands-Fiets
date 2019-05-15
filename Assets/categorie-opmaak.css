@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Segoe UI;
+}
+
+#h1 {
+	font-family: Segoe UI;
+	font-size: 44px;
+	color: #0066FF;
+	margin: 20px 0 0 50px;
+	padding: 0px;
+}
+
+#hr {
+	width: 85%;
+	padding: 0px;
+	margin: 0 0 0 50px;
+	background-color: #0066FF;
+}
+
+.overzicht {
+	margin: 0 auto;
+	width: 85%;
+}
+
+.overzicht table {
+	margin: 5px;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.overzicht img {
+	width: 100px;
+	height: 100px;
+	margin: 0 10px 0 0px;
+	padding: 0px;
+}
+
+.img-td {
+	height: 120px;
+	width: 10%;
+}
+
+.tekst-td {
+	height: 120px;
+	width: 70%;
+}
+
+.prijs-td {
+	height: 120px;
+	width: 10%;
+}
+
+.button-td {
+	height: 120px;
+	width: 10%;
+}
+
+.overzicht p {
+	font-weight: normal;
+	color: #969696;
+	font-size: 20px;
+}
+
+.overzicht tr{
+	color: #0066FF;
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 ;
+	border: solid 1px #707070;
+}
+
+.overzicht td {
+	background-color: #F0F6FF;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+.overzicht th {
+	background-color: white;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
