@@ -8,6 +8,6 @@
 
 	if($conn->connect_error) {
 		$_SESSION['databaseError'] = true;
-		header("Location: index.php");
+//		header("Location: index.php");
 	}
 ?>

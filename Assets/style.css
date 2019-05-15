@@ -15,7 +15,7 @@ body{
 }
 .btn-primary:hover {background-color: #0052cc;}
 #main {min-height: 54vh;}
-.row {margin: 0!important;}
+.row {margin: 0;}
 
 /*Navbar / header*/
 #header {border-bottom: 1.5px solid #e6e6e6;}
@@ -177,7 +177,7 @@ body{
 #perfectBike input[type=submit]:hover {background-color: #0052cc;}
 
 
-#homepageContent {margin: 1% 0!important;}
+#homepageContent {margin: 1% 0 0;}
 #homepageContent h1 {
 	font-size: 30px;
 	font-weight: bold;
@@ -205,13 +205,19 @@ body{
 	color: white;
 	width: 100vw;
 }
-
+.scrolling-wrapper {-webkit-overflow-scrolling: touch;}
+.homepageBikesWrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; 
+}
 .homepageBike {
 	width: 90%;
 	border: 1px solid #707070;
 	padding: 2vh 1%;
 	margin: 0 5%;
 	display: inline-block;
+	clear: both;
 }
 .homepageBike img {
 	max-width: 80%;
@@ -228,33 +234,46 @@ body{
 	font-size: 1.7em;
 	margin: 5%;
 }
+/*
 .homepageBike h4 {
 	float: left;
 }
+*/
 .homepageBikeOriginalPrice {text-decoration: line-through;}
 .homepageBikeActionPrice {
 	color: red;
 	font-weight: bold;
 	font-size: 1.5em;
 }
+.homepageBikePrice {margin-top: 17.5%;}
+.homepagePriceWrapper {float: left;}
 .homepageBike a {
 	background-color: #0066FF;
 	color: white;
 	font-weight: bold;
 	font-size: 1.7em;
-	padding: 1.5% 3%;
-	position: relative;
-	right: 1%;
+	width: 120px;
+	text-align: center;
+	text-decoration: none;
+	float: right;
+	margin-top: 5%;
 }
 
+#homepageCategory {
+	text-align: center;
+}
+#homepageCategory h3 {
+	font-weight: bold;
+}
 #homepageCategory ul {
 	list-style: none;
-	margin: 0;
+	margin: 5% 0;
 	padding: 0;
 }
 #homepageCategory li {
 	width: 100%;
-	text-align: center;
+	margin: 1.5% 0;
+	font-size: 1.3em;
 }
 #homepageCategory a {
 	text-decoration: none;
@@ -267,18 +286,61 @@ body{
 	height: 90vh;
 	font-weight: bold;
 }
+#rating form {
+	width: 100%;
+	margin: 7.5% 0 0;
+}
 #rating label {
 	font-size: 1.3em;
 }
 #rating input[type=range] {
-	width: 80%;
+	width: 85%;
 }
+input[type=range] {-webkit-appearance: none; background: transparent;}
+input[type=range]:focus {outline: none;}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 25px;
+ 	 width: 25px;
+  	border-radius: 50%;
+  	border: 2px solid #fff;
+  	background: #0066FF;
+  	cursor: pointer;
+  	margin-top: -12px; 
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #ffffff;
+	margin-top: -15px;
+}
+
 #rating input[type=text], #rating textarea {
-	width: 80%;
+	width: 100%;
+	margin-bottom: 3%;
+}
+#rating input[type=text] {
+	height: 5%;
 }
 #rating textarea {
 	resize: none;
+	height: 20%;
 }
+#rating input[type=submit] {
+	height: 5%;
+	color: white;
+	background-color: #FF7D00;
+	border: none;
+	width: 40%;
+	font-weight: bold;
+	float: right;
+	margin: 10% 1% 0 0;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+#rating span {margin-left: 2%; font-size: 1.5em;}
+#bikes {margin-top: 5%;}
 
 /*Footer*/
 #upperFooter {
@@ -334,14 +396,24 @@ body{
 
 /*Media query's*/
 @media screen and (max-width: 600px) {
-	#upperFooter .col {min-width: 90%;}
+	#upperFooter .col {min-width: 90%; margin-top: 5%;}
+	#upperFooter {padding-bottom: 7.5%;}
 }
 
 @media screen and (min-width: 601px) {
 	#upperFooter .verticalLine {display: block;}
+	.homepageBikesWrapper {
+		overflow: visible;
+		white-space: normal;
+	}
 }
 
-@media screen and (min-width: 992px) {
+/* TABLET */
+@media screen and (min-width: 768px) {
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1281px) {
 	#mobileToggler, #mobileNavbar {display: none;}
 	#lowerNavbar form, #lowerNavbar #cart {display: block;}
 	#upperNavbar {display: block;}

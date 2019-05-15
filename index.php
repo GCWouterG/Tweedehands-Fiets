@@ -3,7 +3,7 @@
 	require('Assets/header.php');
 
 	if(isset($_POST['rate'])) {
-		echo $sendRateQuery = "INSERT INTO beoordeling (beoordelingScore, beoordelingNaam, beoordelingAanvulling)
+		$sendRateQuery = "INSERT INTO beoordeling (beoordelingScore, beoordelingNaam, beoordelingAanvulling)
 						VALUES ('{$_POST['rating']}', '{$_POST['name']}', '{$_POST['comment']}')";
 		$sendRate = $conn->query($sendRateQuery);
 	}
@@ -84,19 +84,28 @@
 					<div class="homepageBike">
 						<img src="Assets/images/Uploads/bike.png" alt="Bike">
 						<p>Lorem Ipsum dolor si di amet</p>
-						<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4><h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+						<div class="homepagePriceWrapper">
+							<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4>
+							<h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+						</div>
 						<a href="">Bekijk</a>
 					</div>
 					<div class="homepageBike">
 						<img src="Assets/images/Uploads/bike.png" alt="Bike">
 						<p>Lorem Ipsum dolor si di amet</p>
-						<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4><h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+						<div class="homepagePriceWrapper">
+							<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4>
+							<h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+						</div>
 						<a href="">Bekijk</a>
 					</div>
 					<div class="homepageBike">
 						<img src="Assets/images/Uploads/bike.png" alt="Bike">
 						<p>Lorem Ipsum dolor si di amet</p>
-						<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4><h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+						<div class="homepagePriceWrapper">
+							<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4>
+							<h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+						</div>
 						<a href="">Bekijk</a>
 					</div>
 				</div>
@@ -107,19 +116,25 @@
 					<div class="homepageBike">
 						<img src="Assets/images/Uploads/bike.png" alt="Bike">
 						<p>Lorem Ipsum dolor si di amet</p>
-						<h4 class="homepageBikePrice">&euro; 123,45</h4>
+						<div class="homepagePriceWrapper">
+							<h4 class="homepageBikePrice">&euro; 123,45</h4>
+						</div>
 						<a href="">Bekijk</a>
 					</div>
 					<div class="homepageBike">
 						<img src="Assets/images/Uploads/bike.png" alt="Bike">
 						<p>Lorem Ipsum dolor si di amet</p>
-						<h4 class="homepageBikePrice">&euro; 123,45</h4>
+						<div class="homepagePriceWrapper">
+							<h4 class="homepageBikePrice">&euro; 123,45</h4>
+						</div>
 						<a href="">Bekijk</a>
 					</div>
 					<div class="homepageBike">
 						<img src="Assets/images/Uploads/bike.png" alt="Bike">
 						<p>Lorem Ipsum dolor si di amet</p>
-						<h4 class="homepageBikePrice">&euro; 123,45</h4>
+						<div class="homepagePriceWrapper">
+							<h4 class="homepageBikePrice">&euro; 123,45</h4>
+						</div>
 						<a href="">Bekijk</a>
 					</div>
 				</div>
