@@ -1,14 +1,18 @@
 <?php
+
 	session_start();
 	include('Assets/connect.php');
 
 
 	$getCategorysQuery = "SELECT * FROM categorieen";
 	$getCategorys = $conn->query($getCategorysQuery);
+
 ?>
+
 <!doctype html>
 <html>
 <head>
+	
 	<meta charset="utf-8">
 	<meta name="author" content="Graafschap College">
 	<meta name="Description" content="Tweedehands fietsensite - SCRUM project">
@@ -21,32 +25,48 @@
 	<title><?php echo $pageTitle;?> | Tweedehands Fiets B.V.</title>
 	<link rel="stylesheet" type="text/css" href="Assets/style.css">
 	<link rel="icon" href="Assets/images/favicon.png">
+	
 </head>
 
 <body>
+	
 	<header id="header">
+		
 		<nav id="upperNavbar">
+			
 			<div id="buttonWrapper">
+				
 				<?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {?>
 					<a class="btn btn-primary" id="navAccount"><i class="fas fa-user"></i> Account</a>
 				<?php } else {?>
 					<a class="btn btn-primary" id="navLogin"><i class="fas fa-unlock-alt"></i> Log in</a>
 					<a class="btn btn-primary" id="navRegister"><i class="fas fa-user-plus"></i> Registreer</a>
 				<?php } ?>
+				
 			</div>	
+			
 		</nav>
+		
 		<nav id="lowerNavbar">
+			
 			<a href=""><img src="Assets/images/logo.png" alt="logo"></a>
+			
 			<div id="lowerNavbarWrapper">
+				
 				<form class="form-inline">
 				  <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Search">
 				  <button class="btn btn-primary" type="submit">Zoek</button>
 				</form>				
 				<a href="" id="cart"><i class="fas fa-shopping-cart"></i></a>
+				
 				<div id="mobileToggler"><div class="fas fa-bars"></div></div>
+				
 			</div>
+			
 		</nav>
+		
 		<nav id="mobileNavbar">
+			
 			<ul>
 				<li><a href="">Winkelwagen</a></li>
 				<li><a class="dropdownToggler">Categorieën</a>
@@ -69,5 +89,7 @@
 				<a class="btn btn-primary" id="navLogin"><i class="fas fa-unlock-alt"></i> Log in</a>
 				<a class="btn btn-primary" id="navRegister"><i class="fas fa-user-plus"></i> Registreer</a>
 			<?php } ?>
+			
 		</nav>
+		
 	</header>

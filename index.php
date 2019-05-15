@@ -1,4 +1,5 @@
 <?php
+
 	$pageTitle = "Home";
 	require('Assets/header.php');
 
@@ -7,70 +8,70 @@
 						VALUES ('{$_POST['rating']}', '{$_POST['name']}', '{$_POST['comment']}')";
 		$sendRate = $conn->query($sendRateQuery);
 	}
+
 ?>
+
 <div id="main">
+	
 	<div id="banner">
 	
 		<img src="Assets/images/banner.jpg" alt="Bike in front of a wall with two windows." style="visibility: hidden;">
 	
 		<div id="perfectBike">
 		
-			<form>				
-				<fieldset>
-					<legend><b>Vind de perfecte fiets</b></legend>
-					
-						<form method="post">
-							<table>
-								<tr>
-									<td>
-										<select name="category" class="form-control">
-											<option disabled selected>Categorie</option>
-											<option>Test</option>
-										</select>
-									</td>
-									<td>
-										<select name="category" class="form-control">
-											<option disabled selected>Merk</option>
-											<option>Test</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<select name="category" class="form-control">
-											<option disabled selected>Framemaat</option>
-											<option>Test</option>
-										</select>
-									</td>
-									<td>
-										<select name="category" class="form-control">
-											<option disabled selected>Kleur</option>
-											<option>Test</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<select name="category" class="form-control">
-											<option disabled selected>Prijs van</option>
-											<option>Test</option>
-										</select>
-									</td>
-									<td>
-										<select name="category" class="form-control">
-											<option disabled selected>Tot</option>
-											<option>Test</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td><input type="submit" name="submit" value="Zoek"></td>
-								</tr>
-							</table>
-						</form>
-					
-				</fieldset>
-			</form>
+							
+			<fieldset>
+				<legend><b>Vind de perfecte fiets</b></legend>
+					<form method="post">
+						<table>
+							<tr>
+								<td>
+									<select name="category" class="form-control">
+										<option disabled selected>Categorie</option>
+										<option>Test</option>
+									</select>
+								</td>
+								<td>
+									<select name="category" class="form-control">
+										<option disabled selected>Merk</option>
+										<option>Test</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<select name="category" class="form-control">
+										<option disabled selected>Framemaat</option>
+										<option>Test</option>
+									</select>
+								</td>
+								<td>
+									<select name="category" class="form-control">
+										<option disabled selected>Kleur</option>
+										<option>Test</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<select name="category" class="form-control">
+										<option disabled selected>Prijs van</option>
+										<option>Test</option>
+									</select>
+								</td>
+								<td>
+									<select name="category" class="form-control">
+										<option disabled selected>Tot</option>
+										<option>Test</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="submit" name="submit" value="Zoek"></td>
+							</tr>
+						</table>
+					</form>
+			</fieldset>
 		
 		</div>
 	
@@ -110,6 +111,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row" id="bikes">
 				<h1>Nieuwste fietsen</h1>
 				<div class="homepageBikesWrapper">
@@ -140,6 +142,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="homepageRight">
 			<div class="row" id="homepageCategory">
 			 <h3>Categorieën</h3>
@@ -164,8 +167,11 @@
 				</form>
 			</div>	
 		</div>
+		
 	</div>
 </div>
+
 	<?php require('Assets/footer.php');?>
+
 </body>
 </html>
