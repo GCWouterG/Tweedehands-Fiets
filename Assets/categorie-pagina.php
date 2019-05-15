@@ -14,52 +14,39 @@
 	<br>
 	<h1 id="h1">Mannenfietsen</h1>
 	<hr id="hr">
+	<br>
 	
-	<table class="overzicht">
-		<tr>
-			<td class="img-td"> <img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></td>
-			<td class="tekst-td"> Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></td>
-			<td class="prijs-td"> €123,45 </td>
-			<td class="button-td"> <a href="#" class="btn btn-primary"> Bekijk </a> </td>
-		</tr>
-		<tr>
-			<th class="img-td"> <img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></th>
-			<th class="tekst-td"> Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></th>
-			<th class="prijs-td"> €123,45 </th>
-			<th class="button-td"> <a href="#" class="btn btn-primary"> Bekijk </a> </th>
-		</tr>
-		<tr>
-			<td class="img-td"> <img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></td>
-			<td class="tekst-td"> Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></td>
-			<td class="prijs-td"> €123,45 </td>
-			<td class="button-td"> <a href="#" class="btn btn-primary"> Bekijk </a> </td>
-		</tr>
-		<tr>
-			<th class="img-td"> <img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></th>
-			<th class="tekst-td"> Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></th>
-			<th class="prijs-td"> €123,45 </th>
-			<th class="button-td"> <a href="#" class="btn btn-primary"> Bekijk </a> </th>
-		</tr>
-		<tr>
-			<td class="img-td"> <img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></td>
-			<td class="tekst-td"> Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></td>
-			<td class="prijs-td"> €123,45 </td>
-			<td class="button-td"> <a href="#" class="btn btn-primary"> Bekijk </a> </td>
-		</tr>
-		<tr>
-			<th class="img-td"> <img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></th>
-			<th class="tekst-td"> Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></th>
-			<th class="prijs-td"> €123,45 </th>
-			<th class="button-td"> <a href="#" class="btn btn-primary"> Bekijk </a> </th>
-		</tr>
-		<tr>
-			<td class="img-td"> <img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></td>
-			<td class="tekst-td"> Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></td>
-			<td class="prijs-td"> €123,45 </td>
-			<td class="button-td"> <a href="#" class="btn btn-primary"> Bekijk </a> </td>
-		</tr>
-		
-	</table>
+	
+	<div class="categorie-row">
+		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
+		<div class="tekst-td">Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></div>
+		<div class="prijs-td">€123,45</div>
+		<div class="button-td"><a href="#" class="btn btn-primary"> Bekijk </a></div>
+	</div>
+	<div class="categorie-row">
+		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
+		<div class="tekst-td">Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></div>
+		<div class="prijs-td">€123,45</div>
+		<div class="button-td"><a href="#" class="btn btn-primary"> Bekijk </a></div>
+	</div>
+	<div class="categorie-row">
+		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
+		<div class="tekst-td">Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></div>
+		<div class="prijs-td">€123,45</div>
+		<div class="button-td"><a href="#" class="btn btn-primary"> Bekijk </a></div>
+	</div>
+	<div class="categorie-row">
+		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
+		<div class="tekst-td">Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></div>
+		<div class="prijs-td">€123,45</div>
+		<div class="button-td"><a href="#" class="btn btn-primary"> Bekijk </a></div>
+	</div>
+	<div class="categorie-row">
+		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
+		<div class="tekst-td">Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></div>
+		<div class="prijs-td">€123,45</div>
+		<div class="button-td"><a href="#" class="btn btn-primary"> Bekijk </a></div>
+	</div>
 	
 
 	<br>

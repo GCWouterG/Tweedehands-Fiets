@@ -20,68 +20,96 @@ body {
 	background-color: #0066FF;
 }
 
-.overzicht {
-	margin: 0 auto;
-	width: 85%;
-}
-
-.overzicht table {
-	margin: 5px;
-	table-layout: fixed;
-	width: 100%;
-}
-
-.overzicht img {
+.categorie-row img {
 	width: 100px;
 	height: 100px;
 	margin: 0 10px 0 0px;
 	padding: 0px;
 }
 
+.categorie-row:nth-of-type(odd) {
+	background-color: #F0F6FF;
+}
+
+.categorie-row:nth-of-type(even) {
+	background-color: white;
+}
+
+.categorie-row {
+	width: 85%;
+	height: 120px;
+	color: #0066FF;
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0 ;
+}
+
+
 .img-td {
 	height: 120px;
 	width: 10%;
+	float: left;
+	text-align: center;
+	padding: 10px 0 0 0;
 }
 
 .tekst-td {
 	height: 120px;
 	width: 70%;
+	float: left;
+	padding: 10px 0 0 0;
 }
 
 .prijs-td {
 	height: 120px;
 	width: 10%;
+	float: left;
+	text-align: center;
+	padding: 40px 0 0 0;
 }
 
 .button-td {
 	height: 120px;
 	width: 10%;
+	float: left;
+	text-align: center;
+	padding: 35px 0 0 0;
 }
 
-.overzicht p {
+.categorie-row p {
 	font-weight: normal;
 	color: #969696;
 	font-size: 20px;
 }
 
-.overzicht tr{
-	color: #0066FF;
-	font-size: 26px;
-	font-weight: bold;
-	margin: 0;
-	padding: 0 ;
-	border: solid 1px #707070;
-}
 
-.overzicht td {
-	background-color: #F0F6FF;
-	margin: 0;
-	padding: 0 0 0 10px;
-}
 
-.overzicht th {
-	background-color: white;
-	margin: 0;
-	padding: 0 0 0 10px;
+@media screen and (max-width: 520px) {
+	#h1 {
+		font-size: 35px;
+	}
+	
+	#hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		
+		float: left;
+	}
+
+	.tekst-td {
+		float: left;
+	}
+	
+	.prijs-td {
+		float: left;
+	}
+	
+	.button-td {
+		float: left;
+	}
 }
 
