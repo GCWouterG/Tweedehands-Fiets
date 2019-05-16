@@ -34,7 +34,7 @@
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Merk</option>
-										<option>Test</option>
+									<option>Test</option>
 									</select>
 								</td>
 							</tr>

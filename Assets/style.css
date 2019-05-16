@@ -140,7 +140,7 @@ body{
 	width: 93%;
 	border-radius: 67px;
 	display: grid;
-	padding: 7% 4%;
+	padding: 7% 3%;
 }
 
 #perfectBike legend {
@@ -157,7 +157,7 @@ body{
 }
 #perfectBike td {width: 50%; padding-right: 2%;}
 #perfectBike td select {
-	padding: 4% 2%;
+	padding: 4% 2% 0;
 	margin: 0 0 10% 1%;
 	font-size: 20px;
 	height: auto;
@@ -279,7 +279,7 @@ body{
 	text-decoration: none;
 }
 #rating img {
-	height: 10%;
+	height: 15%;
 }
 #rating {
 	padding: 5% 7.5%;
@@ -340,7 +340,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	-webkit-transition: 0.3s;
 }
 #rating span {margin-left: 2%; font-size: 1.5em;}
-#bikes {margin-top: 5%;}
+#bikes {margin: 5% 0 2% 0;}
 
 /*Footer*/
 #upperFooter {
