@@ -9,6 +9,12 @@
 		$sendRate = $conn->query($sendRateQuery);
 	}
 
+	class Bike {
+		
+		/* Voor alles in een public variabele de uit de database gehaalde waarde zetten */
+		
+	}
+
 ?>
 
 <div id="main">
@@ -28,13 +34,19 @@
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Categorie</option>
-										<option>Test</option>
+										<?php foreach($getCategorys as $value) { 
+											echo "<option><a href='category.php? id={$value['categorieID']}'>{$value['categorieNaam']}</a></option>";
+										} ?>
 									</select>
 								</td>
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Merk</option>
-									<option>Test</option>
+										<?php $result = array_unique($getBrands);
+										foreach($result as $value) {
+											echo "<option><a href='brand.php? id={$value['fietsID']}'>{$value['fietsMerk']}</a></option>";
+										} ?>
+										<option>Test</option>
 									</select>
 								</td>
 							</tr>
@@ -149,8 +161,7 @@
 				<ul>
 					<?php foreach($getCategorys as $value) { 
 						echo "<li title='{$value['categorieBeschrijving']}'><a href='category.php?id={$value['categorieID']}'>{$value['categorieNaam']}</a></li>";
-					} ?>				
-					
+					} ?>
 				</ul>
 			</div>
 			<div class="row" id="rating">

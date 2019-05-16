@@ -157,7 +157,7 @@ body{
 }
 #perfectBike td {width: 50%; padding-right: 2%;}
 #perfectBike td select {
-	padding: 4% 2% 0;
+	padding: 4% 2%;
 	margin: 0 0 10% 1%;
 	font-size: 20px;
 	height: auto;
@@ -279,7 +279,7 @@ body{
 	text-decoration: none;
 }
 #rating img {
-	height: 15%;
+	height: 10%;
 }
 #rating {
 	padding: 5% 7.5%;
