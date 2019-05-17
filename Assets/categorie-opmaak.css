@@ -147,7 +147,7 @@ body {
 	}
 	
 	.categorie-row p {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	
 	.prijs-td {
@@ -164,4 +164,138 @@ body {
 		padding-top: 0px;
 	}
 	
+}
+
+@media screen and (min-width: 650px) {
+	#h1 {
+		font-size: 40px;
+	}
+	
+	#hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 20px;
+		width: 410px;
+		float: left;
+	}
+	
+	.categorie-row p {
+		font-size: 18px;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 0px;
+	}
+}
+
+@media screen and (min-width: 730px) {
+	#h1 {
+		font-size: 40px;
+	}
+	
+	#hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 20px;
+		width: 400px;
+		float: left;
+	}
+	
+	.categorie-row p {
+		font-size: 18px;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 20px;
+	}
+}
+
+@media screen and (min-width: 820px) {
+	#h1 {
+		font-size: 42px;
+	}
+	
+	#hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 20px;
+		width: 475px;
+		float: left;
+	}
+	
+	.categorie-row p {
+		font-size: 18px;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 20px;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.prijs-td {
+		padding-top: 40px;
+		padding-right: 50px;
+	}
+	
+	.button-td {
+		padding-top: 35px;
+		padding-right: 15px;
+	}
 }
