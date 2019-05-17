@@ -37,6 +37,7 @@
 		<div class="prijs-td">&euro;<?php echo str_replace(".", ",", $row['fietsPrijs']); ?></div>
 		<div class="button-td"><a href="bike.php?id=<?php echo $row['fietsID']?>" class="btn btn-primary"> Bekijk </a></div>
 	</div>
+	<br>
 	<?php
 		}
 	
