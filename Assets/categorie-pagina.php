@@ -1,22 +1,44 @@
+<?php
+	$pageTitle = "categorie";
+	require 'header.php';
+	
+
+	$getCategorName = "SELECT categorieNaam FROM categorieen WHERE categorieID = {$_GET['id']}";
+	$categorieNaam = $conn->query($getCategorName);
+	$categorieNaam = $categorieNaam->fetch_assoc()['categorieNaam'];
+
+	$getBikes = "SELECT * 
+				FROM fietsen 
+				INNER JOIN staat
+				ON fietsen.staatID = staat.staatID
+				WHERE fietsen.categorieID = {$_GET['id']}
+				AND fietsen.fietsStatus = 'te koop'
+                ORDER BY fietsen.fietsID DESC";
+	$bikes = $conn->query($getBikes);
+?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Naamloos document</title>
 	<link href="categorie-opmaak.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-	<?php
-		require 'header.php';
-	?>
 	<br>
-	<h1 id="h1">Mannenfietsen</h1>
+	<h1 id="h1"><?php echo $categorieNaam; ?></h1>
 	<hr id="hr">
 	<br>
 	
-	
+	<?php while($row = $bikes->fetch_assoc()) {?>
+	<div class="categorie-row">
+		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
+		<div class="tekst-td"><?php echo $row['fietsNaam']?> <br> <p title="<?php echo $row['staatBeschrijving']?>">Staat: <?php echo $row['staatNaam']?></p></b></div>
+		<div class="prijs-td">&euro;<?php echo str_replace(".", ",", $row['fietsPrijs']); ?></div>
+		<div class="button-td"><a href="bike.php?id=<?php echo $row['fietsID']?>" class="btn btn-primary"> Bekijk </a></div>
+	</div>
+	<?php } ?>
+<!--
 	<div class="categorie-row">
 		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
 		<div class="tekst-td">Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></div>
@@ -41,12 +63,7 @@
 		<div class="prijs-td">€123,45</div>
 		<div class="button-td"><a href="#" class="btn btn-primary"> Bekijk </a></div>
 	</div>
-	<div class="categorie-row">
-		<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
-		<div class="tekst-td">Lorem Ipsum dolor si di amet <br> <p>Arnhem, GE</p></div>
-		<div class="prijs-td">€123,45</div>
-		<div class="button-td"><a href="#" class="btn btn-primary"> Bekijk </a></div>
-	</div>
+-->
 	
 
 	<br>

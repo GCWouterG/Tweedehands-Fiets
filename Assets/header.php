@@ -1,8 +1,10 @@
 <?php
 	session_start();
-	
-	$pageTitle = "{title}";
-	$_SESSION['loggedIn'] = false;
+
+	require("connect.php");
+
+	$getCategorysQuery = "SELECT * FROM categorieen";
+    $getCategorys = $conn->query($getCategorysQuery);
 ?>
 <!doctype html>
 <html>
