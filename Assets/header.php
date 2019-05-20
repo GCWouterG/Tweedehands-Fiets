@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	require("connect.php");
-	$mainLink = "http://{$_SERVER['HTTP_HOST']}/Tweedehands-Fiets";
+	$mainLink = "http://{$_SERVER['HTTP_HOST']}/Fietsensite/Tweedehands-Fiets";
 
 	$getCategorysQuery = "SELECT * FROM categorieen";
     $getCategorys = $conn->query($getCategorysQuery);
