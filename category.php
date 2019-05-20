@@ -2,6 +2,9 @@
 	$pageTitle = "categorie";
 	require 'Assets/header.php';
 	
+	if(!isset($_GET['id'])) {
+		header("Location: {$mainLink}");
+	}
 
 	$getCategorName = "SELECT categorieNaam FROM categorieen WHERE categorieID = {$_GET['id']}";
 	$categorieNaam = $conn->query($getCategorName);
