@@ -24,7 +24,7 @@
 	
 		<?php while($row = $bikes->fetch_assoc()) {?>
 		<div class="categorie-row">
-			<div class="img-td"><img src="images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
+			<div class="img-td"><img src="Assets/images/Elektrische+fiets+E+bike+Elops+920+hoog+frame+stadsfiets+donkergroen.jpg"></div>
 			<div class="tekst-td"><?php echo $row['fietsNaam']?> <br> <p title="<?php echo $row['staatBeschrijving']?>">Staat: <?php echo $row['staatNaam']?></p></b></div>
 			<div class="prijs-td">&euro;<?php echo str_replace(".", ",", $row['fietsPrijs']); ?></div>
 			<div class="button-td"><a href="bike.php?id=<?php echo $row['fietsID']?>" class="btn btn-primary"> Bekijk </a></div>

@@ -1,9 +1,11 @@
 <?php
 	session_start();
 	require("connect.php");
+	$mainLink = "http://{$_SERVER['HTTP_HOST']}/Tweedehands-Fiets";
 
 	$getCategorysQuery = "SELECT * FROM categorieen";
     $getCategorys = $conn->query($getCategorysQuery);
+	
 ?>
 <!doctype html>
 <html>
@@ -17,7 +19,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
 	<title><?php echo $pageTitle;?> | Tweedehands Fiets B.V.</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $mainLink; ?>/Assets/style.css">
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 			</div>	
 		</nav>
 		<nav id="lowerNavbar">
-			<a href=""><img src="Assets/images/logo.png" alt="logo"></a>
+			<a href="<?php echo $mainLink; ?>"><img src="<?php echo $mainLink; ?>/Assets/images/logo.png" alt="logo"></a>
 			<div id="lowerNavbarWrapper">
 				<form class="form-inline">
 				  <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Search">
