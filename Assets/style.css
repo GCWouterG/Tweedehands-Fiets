@@ -112,6 +112,82 @@
 
 body{margin: 0; padding: 0;}
 
+/*Category and search page*/
+#categoryHeader h1 {
+	font-family: Segoe UI;
+	font-size: 44px;
+	color: #0066FF;
+	margin: 20px 0 0 50px;
+	padding: 0px;
+}
+
+#categoryHeader hr {
+	width: 85%;
+	padding: 0px;
+	margin: 0 0 0 50px;
+	background-color: #0066FF;
+}
+.categorie-row img {
+	width: 100px;
+	height: 100px;
+	margin: 0 10px 0 0px;
+	padding: 0px;
+}
+
+.categorie-row:nth-of-type(odd) {
+	background-color: #F0F6FF;
+}
+
+.categorie-row:nth-of-type(even) {
+	background-color: white;
+}
+
+.categorie-row {
+	width: 85%;
+	height: 120px;
+	color: #0066FF;
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0 ;
+	border: solid #707070 1px;
+}
+
+
+.img-td {
+	height: 120px;
+	width: 120px;
+	float: left;
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+.tekst-td {
+	width: 900px;
+	float: left;
+	padding: 10px 0 0 0;
+}
+
+.prijs-td {
+	width: 120px;
+	float: left;
+	text-align: center;
+	padding: 40px 0 0 0;
+}
+
+.button-td {
+	width: 120px;
+	float: left;
+	text-align: center;
+	padding: 35px 0 0 0;
+}
+
+.categorie-row p {
+	font-weight: normal;
+	color: #969696;
+	font-size: 20px;
+	margin: 0px;
+}
 
 /*Footer*/
 #upperFooter {
@@ -163,6 +239,8 @@ body{margin: 0; padding: 0;}
 	color: white;
 	padding: 0.7% 0;
 }
+
+
 @media screen and (max-width: 600px) {
 	#upperFooter .col {
 		min-width: 50%;
@@ -171,5 +249,220 @@ body{margin: 0; padding: 0;}
 @media screen and (min-width: 601px) {
 	#upperFooter .verticalLine {
 		display: block;
+	}
+}
+@media screen and (max-width: 570px) {
+	#categoryHeader h1 {
+		font-size: 30px;
+	}
+	
+	#categoryHeader hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.categorie-row p {
+		font-size: 14px;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 16px;
+		width: 280px;
+		float: left;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 10px;
+	}
+}
+
+
+@media screen and (min-width: 570px) { 
+	#categoryHeader h1 {
+		font-size: 35px;
+	}
+	
+	#categoryHeader hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 18px;
+		width: 350px;
+		float: left;
+	}
+	
+	.categorie-row p {
+		font-size: 16px;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 0px;
+	}
+	
+}
+
+@media screen and (min-width: 650px) {
+	#categoryHeader h1 {
+		font-size: 40px;
+	}
+	
+	#categoryHeader hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 20px;
+		width: 410px;
+		float: left;
+	}
+	
+	.categorie-row p {
+		font-size: 18px;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 0px;
+	}
+}
+
+@media screen and (min-width: 730px) {
+	#categoryHeader h1 {
+		font-size: 40px;
+	}
+	
+	#categoryHeader hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 20px;
+		width: 400px;
+		float: left;
+	}
+	
+	.categorie-row p {
+		font-size: 18px;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 20px;
+	}
+}
+
+@media screen and (min-width: 820px) {
+	#categoryHeader h1 {
+		font-size: 42px;
+	}
+	
+	#categoryHeader hr {
+		width: 75%;
+		text-align: center;
+	}
+	
+	.img-td {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	.tekst-td {
+		font-size: 20px;
+		width: 475px;
+		float: left;
+	}
+	
+	.categorie-row p {
+		font-size: 18px;
+	}
+	
+	.prijs-td {
+		font-size: 20px;
+		width: auto;
+		float: left;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+	
+	.button-td {
+		width: auto;
+		float: right;
+		padding-right: 10px;
+		padding-top: 20px;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.prijs-td {
+		padding-top: 40px;
+		padding-right: 50px;
+	}
+	
+	.button-td {
+		padding-top: 35px;
+		padding-right: 15px;
 	}
 }
