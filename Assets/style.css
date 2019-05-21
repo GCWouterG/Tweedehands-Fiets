@@ -327,6 +327,13 @@ body{margin: 0; padding: 0;}
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#bikeMain img {
+		max-width: 40%;
+		margin-left: 5%;
+	}
+}
+
 @media screen and (min-width: 992px) {
 	#mobileToggler, #mobileNavbar {display: none;}
 	#lowerNavbar form, #lowerNavbar #cart {display: block;}

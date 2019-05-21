@@ -1,6 +1,12 @@
 <?php
 	$pageTitle = "Fiets";
 	require('Assets/header.php');
+
+	$getBikeInfo = "SELECT *
+					FROM fietsen
+					INNER JOIN staat
+					ON fietsen.staat = staat.staatID
+					WHERE fietsID = {$_GET['id']}"
 ?>
 	<div id="main">
 		<div id="bikeMain">
