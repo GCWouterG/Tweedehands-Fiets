@@ -1,1 +1,2 @@
-Assets/connect.php
+#Exclude connect.php file
+connect.php
