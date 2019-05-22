@@ -1,5 +1,5 @@
 <?php
-	$dbHost = "localhost";
+	$dbHost = "185.87.187.247";
 	$dbUser = "wgosseling_tweedehandsfiets";
 	$dbPass = "Scrum01!";
 	$dbName = "wgosseling_tweedehands_fiets";
