@@ -193,11 +193,27 @@ body{margin: 0; padding: 0;}
 	height: 60vh;
 	margin: 5vh 0;
 }
-#bikeMain img {
-	max-width: 80%;
+#soldOverlayWrapper {
+	max-width: 70%;
 	float: left;
 	margin-left: 10%;
 	border: 1px solid #707070;
+	position: relative;
+}
+#soldOverlay {
+	width: 100%;
+	background-color: rgba(116,116,116,0.5);
+	color: #FF7D00;
+	position: absolute;
+	height: 100%;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	padding-top: 25%;
+}
+.soldPrice {text-decoration: line-through;}
+#bikeMain img {
+	width: 100%;
 }
 #bikeMainInfoWrapper {
 	background-color: #f2f2f2;
@@ -251,8 +267,9 @@ body{margin: 0; padding: 0;}
 	font-size: 1.75em;
 	font-weight: bold;
 }
-#bikeSpec table {
-	margin: 5% auto 0;
+#bikeSpec table {margin: 0 auto;}
+#bikeSpec table:first-of-type {
+	display: inline-block;
 }
 #bikeSpec td:first-child {
 	text-align: right;
@@ -328,10 +345,6 @@ body{margin: 0; padding: 0;}
 }
 
 @media screen and (min-width: 768px) {
-	#bikeMain img {
-		max-width: 40%;
-		margin-left: 5%;
-	}
 }
 
 @media screen and (min-width: 992px) {
@@ -555,7 +568,7 @@ body{margin: 0; padding: 0;}
 	#bikeMain {
 		height: 60vh;
 	}
-	#bikeMain img {
+	#soldOverlayWrapper {
 		max-height: 90%;
 		max-width: auto;
 		float: left;
@@ -574,7 +587,8 @@ body{margin: 0; padding: 0;}
 	#bikeSpecWrapper {
 		font-size: 1.4em;
 	}
-	#bikeSpecWrapper table {
+	#bikeSpecWrapper table {margin: 0 0 0 5%;}
+	#bikeSpecWrapper table:first-of-type {
 		margin: 2% 0 0 3%;
 	}
 }
