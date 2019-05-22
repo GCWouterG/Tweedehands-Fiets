@@ -7,9 +7,6 @@
 	$getCategorysQuery = "SELECT * FROM categorieen";
 	$getCategorys = $conn->query($getCategorysQuery);
 
-	$getBrandsQuery = "SELECT * FROM fietsen";
-	$getBrands = $conn->query($getBrandsQuery);
-
 ?>
 
 <!doctype html>

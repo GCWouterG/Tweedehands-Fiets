@@ -9,9 +9,25 @@
 		$sendRate = $conn->query($sendRateQuery);
 	}
 
+	$getBrandsQuery = "SELECT * FROM fietsen GROUP BY fietsMerk";
+	$getBrands = $conn->query($getBrandsQuery);
+
+	$getFrameQuery = "SELECT * FROM fietsen GROUP BY fietsFramemaat";
+	$getFrame = $conn->query($getFrameQuery);
+
+	$getPriceMinQuery = "SELECT MIN(fietsPrijs) FROM fietsen";
+	$getPriceMin = $conn->query($getPriceMinQuery);
+	$minPrice = round($getPriceMin->fetch_assoc()['MIN(fietsPrijs)']);
+
+	$getPriceMaxQuery = "SELECT MAX(fietsPrijs) FROM fietsen";
+	$getPriceMax = $conn->query($getPriceMaxQuery);
+	$maxPrice = round($getPriceMax->fetch_assoc()['MAX(fietsPrijs)']);
+
+//	echo $minPrice . "<br>" . $maxPrice;
+
 	class Bike {
 		
-		/* Voor alles in een public variabele de uit de database gehaalde waarde zetten */
+		/* Voor alles de uit de database gehaalde waarde opslaan*/
 		
 	}
 
@@ -35,18 +51,16 @@
 									<select name="category" class="form-control">
 										<option disabled selected>Categorie</option>
 										<?php foreach($getCategorys as $value) { 
-											echo "<option><a href='category.php? id={$value['categorieID']}'>{$value['categorieNaam']}</a></option>";
+											echo "<option value='{$value['categorieID']}'>{$value['categorieNaam']}</option>";
 										} ?>
 									</select>
 								</td>
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Merk</option>
-										<?php $result = array_unique($getBrands);
-										foreach($result as $value) {
-											echo "<option><a href='brand.php? id={$value['fietsID']}'>{$value['fietsMerk']}</a></option>";
+										<?php foreach($getBrands as $value) {
+											echo "<option value='{$value['fietsMerk']}'>{$value['fietsMerk']}</option>";
 										} ?>
-										<option>Test</option>
 									</select>
 								</td>
 							</tr>
@@ -54,7 +68,9 @@
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Framemaat</option>
-										<option>Test</option>
+										<?php foreach($getFrame as $value) {
+											echo "<option value='{$value['fietsFramemaat']}'>{$value['fietsFramemaat']}</option>";
+										} ?>
 									</select>
 								</td>
 								<td>
@@ -68,13 +84,17 @@
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Prijs van</option>
-										<option>Test</option>
+										<?php for($teller=$minPrice; $teller<=$maxPrice; $teller += 50){
+											echo "<option value='{$teller}'>&euro;{$teller}</option>";
+										} ?>
 									</select>
 								</td>
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Tot</option>
-										<option>Test</option>
+										<?php for($teller=$maxPrice; $teller>=$minPrice; $teller -= 50){
+											echo "<option value='{$teller}'>&euro;{$teller}</option>";
+										} ?>
 									</select>
 								</td>
 							</tr>
@@ -96,7 +116,7 @@
 				<div class="homepageBikesWrapper">
 					<div class="homepageBike">
 						<img src="Assets/images/Uploads/bike.png" alt="Bike">
-						<p>Lorem Ipsum dolor si di amet</p>
+						<p>Yeeto yeeto taco burrito</p>
 						<div class="homepagePriceWrapper">
 							<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4>
 							<h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
