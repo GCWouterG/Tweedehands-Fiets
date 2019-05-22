@@ -23,13 +23,8 @@
 	$getPriceMax = $conn->query($getPriceMaxQuery);
 	$maxPrice = round($getPriceMax->fetch_assoc()['MAX(fietsPrijs)']);
 
-//	echo $minPrice . "<br>" . $maxPrice;
-
-	class Bike {
-		
-		/* Voor alles de uit de database gehaalde waarde opslaan*/
-		
-	}
+	$bikeActionInfoQuery = "SELECT * FROM fietsen INNER JOIN acties ON fietsen.actieID = acties.actieID	WHERE fietsen.actieID > 0 ORDER BY fietsen.actieID DESC LIMIT 3";
+	$bikeActionInfo = $conn->query($bikeActionInfoQuery);
 
 ?>
 
@@ -114,33 +109,28 @@
 			<div class="row" id="actions">
 				<h1>Acties van de dag</h1>
 				<div class="homepageBikesWrapper">
+					
+					<?php while($row=$bikeActionInfo->fetch_assoc()){
+						if($row['actiePercentage']>0) {
+							$prijs=$row['fietsPrijs'] * (1 - ($row['actiePercentage'] / 100));
+						} else {
+							$prijs=$row['fietsPrijs']-$row['actiePrijs'];
+						}
+						$decimaalPrijs = str_replace(".", ",", number_format($prijs, 2));
+					?>
+					
 					<div class="homepageBike">
-						<img src="Assets/images/Uploads/bike.png" alt="Bike">
-						<p>Yeeto yeeto taco burrito</p>
-						<div class="homepagePriceWrapper">
-							<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4>
-							<h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+						<div style="">
+							<img src="Assets/images/Uploads/<?php echo $row['fietsID']; ?>.png" alt="Bike">
 						</div>
-						<a href="">Bekijk</a>
-					</div>
-					<div class="homepageBike">
-						<img src="Assets/images/Uploads/bike.png" alt="Bike">
-						<p>Lorem Ipsum dolor si di amet</p>
+						<p><?php $row['fietsNaam'] ?></p>
 						<div class="homepagePriceWrapper">
-							<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4>
-							<h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
+							<h4 class="homepageBikeOriginalPrice">&euro; <?php echo $row['fietsPrijs']; ?></h4>
+							<h4 class="homepageBikeActionPrice">&euro; <?php echo $decimaalPrijs; ?></h4>
 						</div>
-						<a href="">Bekijk</a>
-					</div>
-					<div class="homepageBike">
-						<img src="Assets/images/Uploads/bike.png" alt="Bike">
-						<p>Lorem Ipsum dolor si di amet</p>
-						<div class="homepagePriceWrapper">
-							<h4 class="homepageBikeOriginalPrice">&euro; 123,45</h4>
-							<h4 class="homepageBikeActionPrice">&euro; 123,45</h4>
-						</div>
-						<a href="">Bekijk</a>
-					</div>
+						<a href="#">Bekijk</a>
+					</div>						
+					<?php } ?>					
 				</div>
 			</div>
 			
