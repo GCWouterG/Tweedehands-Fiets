@@ -7,11 +7,11 @@
 	require('Assets/header.php');
 
 	$getBikeInfo = "SELECT * FROM fietsen
-INNER JOIN staat
-ON fietsen.staatID = staat.staatID
-INNER JOIN categorieen
-ON fietsen.categorieID = categorieen.categorieID
-WHERE fietsID = {$_GET['id']}";
+					INNER JOIN staat
+					ON fietsen.staatID = staat.staatID
+					INNER JOIN categorieen
+					ON fietsen.categorieID = categorieen.categorieID
+					WHERE fietsID = {$_GET['id']}";
 	$bikeInfo = $conn->query($getBikeInfo);
 
 	while($row = $bikeInfo->fetch_assoc()) {

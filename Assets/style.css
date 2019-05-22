@@ -194,11 +194,12 @@ body{margin: 0; padding: 0;}
 	margin: 5vh 0;
 }
 #soldOverlayWrapper {
-	max-width: 70%;
+	width: 70%;
 	float: left;
-	margin-left: 10%;
 	border: 1px solid #707070;
 	position: relative;
+	margin: 0 auto;
+	display: block;
 }
 #soldOverlay {
 	width: 100%;
@@ -213,7 +214,10 @@ body{margin: 0; padding: 0;}
 }
 .soldPrice {text-decoration: line-through;}
 #bikeMain img {
-	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+	display: block;
 }
 #bikeMainInfoWrapper {
 	background-color: #f2f2f2;
@@ -569,9 +573,10 @@ body{margin: 0; padding: 0;}
 		height: 60vh;
 	}
 	#soldOverlayWrapper {
-		max-height: 90%;
-		max-width: auto;
+		height: 80%;
+		max-width: 40%;
 		float: left;
+		margin: 0 auto;
 	}
 	#bikeMainInfoWrapper {
 		width: 50vw;
