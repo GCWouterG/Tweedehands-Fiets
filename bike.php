@@ -1,4 +1,8 @@
 <?php
+	if(!isset($_GET['id'])) {
+		exit();
+	}
+
 	$pageTitle = "Fiets";
 	require('Assets/header.php');
 
