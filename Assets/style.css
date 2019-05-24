@@ -273,7 +273,7 @@ body{margin: 0; padding: 0;}
 }
 #bikeSpec table {margin: 0 auto;}
 #bikeSpec table:first-of-type {
-	display: inline-block;
+	margin: 0 auto
 }
 #bikeSpec td:first-child {
 	text-align: right;
@@ -576,7 +576,7 @@ body{margin: 0; padding: 0;}
 		height: 80%;
 		max-width: 40%;
 		float: left;
-		margin: 0 auto;
+		margin: 0 2.5%;
 	}
 	#bikeMainInfoWrapper {
 		width: 50vw;
@@ -592,10 +592,8 @@ body{margin: 0; padding: 0;}
 	#bikeSpecWrapper {
 		font-size: 1.4em;
 	}
-	#bikeSpecWrapper table {margin: 0 0 0 5%;}
-	#bikeSpecWrapper table:first-of-type {
-		margin: 2% 0 0 3%;
-	}
+	#bikeSpecWrapper table {margin: 0 0 0 5%; display: inline-block;}
+	#bikeSpecWrapper table:first-of-type {margin: 2% 0 0 3%;}
 }
 
 @media screen and (min-width: 1400px) {
