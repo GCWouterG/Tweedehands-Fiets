@@ -183,83 +183,63 @@ body{
 	font-weight: bold;
 	color: #0066FF;
 }
-.homepageBikesWrapper {
-	width: inherit;
-}
-.homepageLeft {
-	width: 100%;
-	float: left;
-	position: relative;
-	padding: 0 2%;
-}
-.homepageRight {
-	float: right;
-	width: 100%;
-	position: relative;
-}
-#homepageCategory {
-	display: none;
-}
-#rating {
-	background-color: #0066FF;
-	color: white;
-	width: 100vw;
-}
-.scrolling-wrapper {-webkit-overflow-scrolling: touch;}
-.homepageBikesWrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap; 
-}
-.homepageBike {
-	width: 90%;
-	border: 1px solid #707070;
-	padding: 2vh 1%;
-	margin: 0 5%;
-	display: inline-block;
-	clear: both;
-}
-.homepageBike img {
-	max-width: 80%;
-	max-height: 80%;
-	overflow: hidden;
-	margin: 0 auto;
-	display: block;
-	border: 1px solid #707070;
-}
-.homepageBike p {
-	color: #0066FF;
-	font-weight: bold;
-	text-align: center;
-	font-size: 1.7em;
-	margin: 5%;
-}
-/*
-.homepageBike h4 {
-	float: left;
-}
-*/
-.homepageBikeOriginalPrice {text-decoration: line-through;}
-.homepageBikeActionPrice {
-	color: red;
-	font-weight: bold;
-	font-size: 1.5em;
-}
-.homepageBikePrice {margin-top: 17.5%;}
-.homepagePriceWrapper {float: left;}
-.homepageBike a {
-	background-color: #0066FF;
-	color: white;
-	font-weight: bold;
-	font-size: 1.7em;
-	width: 120px;
-	text-align: center;
-	text-decoration: none;
-	float: right;
-	margin-top: 5%;
+.homepageLeft .row {
+	padding: 0 1.5%;
 }
 
+/*Homepage Bike*/
+.homepageBikesWrapper {
+	height: 55vh;
+	margin: 2% 1%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+.homepageBike {
+	border: 1px solid #707070;
+	height: 100%;
+	margin: 0 1%;
+	display: inline-block;
+}
+.homepageBikeImage {
+	height: 55%;
+	width: 80%;
+	margin: 5% auto;
+}
+.homepageBikeImage img {
+	width: 100%;
+	max-height: 100%;
+}
+.homepageBike h3 {
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+}
+.hompageBikePriceWrapper {
+	float: left;
+}
+.hompageBikeOriginalPrice {
+	text-decoration: line-through;
+	margin: 20% 0 0!important;
+}
+.homepageBikeActionPrice {
+	font-weight: bold;
+	color: red;
+	margin: 0!important;
+}
+.hompageBikePriceWrapper p {
+	margin-top: 35%;
+	font-size: 1.5em;
+}
+.homepageBike a {
+	float: right;
+	margin-top: 12%;
+	width: 100px;
+}
+
+/*Homepage Category*/
 #homepageCategory {
+	display: none;
 	text-align: center;
 }
 #homepageCategory h3 {
@@ -277,6 +257,11 @@ body{
 }
 #homepageCategory a {
 	text-decoration: none;
+}
+#rating {
+	background-color: #0066FF;
+	color: white;
+	width: 100vw;
 }
 #rating img {
 	height: 10%;
@@ -434,11 +419,6 @@ input[type=range]::-webkit-slider-runnable-track {
 	#homepageCategory {display: block;}
 	.homepageLeft {width: 70%;}
 	.homepageRight {width: 30%;}
-	
-	.homepageBike {
-		width: 30%;
-		margin: 0 1.5%;
-	}
 	
 	#rating {
 		height: 90vh;

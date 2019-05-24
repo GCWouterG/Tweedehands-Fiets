@@ -15,6 +15,9 @@
 	$getFrameQuery = "SELECT * FROM fietsen GROUP BY fietsFramemaat";
 	$getFrame = $conn->query($getFrameQuery);
 
+	$getColorQuery = "SELECT * FROM fietsen GROUP BY fietsKleur";
+	$getColor = $conn->query($getColorQuery);
+
 	$getPriceMinQuery = "SELECT MIN(fietsPrijs) FROM fietsen";
 	$getPriceMin = $conn->query($getPriceMinQuery);
 	$minPrice = round($getPriceMin->fetch_assoc()['MIN(fietsPrijs)']);
@@ -26,6 +29,8 @@
 	$bikeActionInfoQuery = "SELECT * FROM fietsen INNER JOIN acties ON fietsen.actieID = acties.actieID	WHERE fietsen.actieID > 0 ORDER BY fietsen.actieID DESC LIMIT 3";
 	$bikeActionInfo = $conn->query($bikeActionInfoQuery);
 
+	$getNewBikes = "SELECT * FROM fietsen ORDER BY fietsID DESC LIMIT 3";
+	$newBikes = $conn->query($getNewBikes);
 ?>
 
 <div id="main">
@@ -71,7 +76,11 @@
 								<td>
 									<select name="category" class="form-control">
 										<option disabled selected>Kleur</option>
-										<option>Test</option>
+										<?php
+											foreach($getColor as $value) {
+												echo "<option value='{$value['fietsKleur']}'>{$value['fietsKleur']}</option>";
+											}
+										?>
 									</select>
 								</td>
 							</tr>
@@ -108,7 +117,7 @@
 		<div class="homepageLeft">
 			<div class="row" id="actions">
 				<h1>Acties van de dag</h1>
-				<div class="homepageBikesWrapper">
+				<div class="homepageBikesWrapper row">
 					
 					<?php while($row=$bikeActionInfo->fetch_assoc()){
 						if($row['actiePercentage']>0) {
@@ -119,48 +128,36 @@
 						$decimaalPrijs = str_replace(".", ",", number_format($prijs, 2));
 					?>
 					
-					<div class="homepageBike">
-						<div style="">
-							<img src="Assets/images/Uploads/<?php echo $row['fietsID']; ?>.png" alt="Bike">
-						</div>
-						<p><?php $row['fietsNaam'] ?></p>
-						<div class="homepagePriceWrapper">
-							<h4 class="homepageBikeOriginalPrice">&euro; <?php echo $row['fietsPrijs']; ?></h4>
-							<h4 class="homepageBikeActionPrice">&euro; <?php echo $decimaalPrijs; ?></h4>
-						</div>
-						<a href="#">Bekijk</a>
-					</div>						
+					<div class="homepageBike col">
+							<div class="homepageBikeImage">
+								<img src="Assets/images/Uploads/<?php echo $row['fietsID']?>.png" alt="bike">
+							</div>
+							<h3><?php echo $row['fietsNaam']; ?></h3>
+							<div class="hompageBikePriceWrapper">
+								<p class="hompageBikeOriginalPrice">&euro;<?php echo str_replace(".", ",", $row['fietsPrijs']); ?></p>
+								<p class="homepageBikeActionPrice">&euro;<?php echo $decimaalPrijs; ?></p>
+							</div>
+							<a href="bike.php?id=<?php echo $row['fietsID']?>" class="btn btn-primary">Bekijk</a>
+						</div>					
 					<?php } ?>					
 				</div>
 			</div>
 			
 			<div class="row" id="bikes">
 				<h1>Nieuwste fietsen</h1>
-				<div class="homepageBikesWrapper">
-					<div class="homepageBike">
-						<img src="Assets/images/Uploads/bike.png" alt="Bike">
-						<p>Lorem Ipsum dolor si di amet</p>
-						<div class="homepagePriceWrapper">
-							<h4 class="homepageBikePrice">&euro; 123,45</h4>
+				<div class="homepageBikesWrapper row">
+					<?php while($row = $newBikes->fetch_assoc()) {?>
+						<div class="homepageBike col">
+							<div class="homepageBikeImage">
+								<img src="Assets/images/Uploads/<?php echo $row['fietsID']?>.png" alt="bike">
+							</div>
+							<h3><?php echo $row['fietsNaam']; ?></h3>
+							<div class="hompageBikePriceWrapper">
+								<p>&euro;<?php echo str_replace(".", ",", $row['fietsPrijs']);?></p>
+							</div>
+							<a href="bike.php?id=<?php echo $row['fietsID']?>" class="btn btn-primary">Bekijk</a>
 						</div>
-						<a href="">Bekijk</a>
-					</div>
-					<div class="homepageBike">
-						<img src="Assets/images/Uploads/bike.png" alt="Bike">
-						<p>Lorem Ipsum dolor si di amet</p>
-						<div class="homepagePriceWrapper">
-							<h4 class="homepageBikePrice">&euro; 123,45</h4>
-						</div>
-						<a href="">Bekijk</a>
-					</div>
-					<div class="homepageBike">
-						<img src="Assets/images/Uploads/bike.png" alt="Bike">
-						<p>Lorem Ipsum dolor si di amet</p>
-						<div class="homepagePriceWrapper">
-							<h4 class="homepageBikePrice">&euro; 123,45</h4>
-						</div>
-						<a href="">Bekijk</a>
-					</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
