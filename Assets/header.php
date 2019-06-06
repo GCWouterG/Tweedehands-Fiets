@@ -6,6 +6,11 @@
 	$getCategorysQuery = "SELECT * FROM categorieen";
     $getCategorys = $conn->query($getCategorysQuery);
 	
+	if(isset($_POST['search'])) {
+		$_SESSION['searchString'] = $_POST['searchString'];
+		header('Location: search.php');
+	}
+
 ?>
 <!doctype html>
 <html>
@@ -37,10 +42,10 @@
 		<nav id="lowerNavbar">
 			<a href="<?php echo $mainLink; ?>"><img src="<?php echo $mainLink; ?>/Assets/images/logo.png" alt="logo"></a>
 			<div id="lowerNavbarWrapper">
-				<form class="form-inline">
-				  <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Search">
-				  <button class="btn btn-primary" type="submit">Zoek</button>
-				</form>				
+				<form class="form-inline" method="post">
+				  <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Search" name="searchString">
+				  <button class="btn btn-primary" type="submit" name="search">Zoek</button>
+				</form>			
 				<a href="" id="cart"><i class="fas fa-shopping-cart"></i></a>
 				<div id="mobileToggler"><div class="fas fa-bars"></div></div>
 			</div>
