@@ -1,8 +1,8 @@
 <?php
-	$dbHost = "localhost";
-	$dbUser = "root";
-	$dbPass = "";
-	$dbName = "tweedehandsfietsen";
+	$dbHost = "185.87.187.247";
+	$dbUser = "wgosseling_tweedehandsfiets";
+	$dbPass = "Scrum01!";
+	$dbName = "wgosseling_tweedehands_fiets";
 	
 	$conn = new Mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
