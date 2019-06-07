@@ -44,7 +44,7 @@
 							
 			<fieldset>
 				<legend><b>Vind de perfecte fiets</b></legend>
-					<form method="post">
+					<form method="post" action="search.php">
 						<table>
 							<tr>
 								<td>
@@ -56,7 +56,7 @@
 									</select>
 								</td>
 								<td>
-									<select name="category" class="form-control">
+									<select name="make" class="form-control">
 										<option disabled selected>Merk</option>
 										<?php foreach($getBrands as $value) {
 											echo "<option value='{$value['fietsMerk']}'>{$value['fietsMerk']}</option>";
@@ -66,7 +66,7 @@
 							</tr>
 							<tr>
 								<td>
-									<select name="category" class="form-control">
+									<select name="frame" class="form-control">
 										<option disabled selected>Framemaat</option>
 										<?php foreach($getFrame as $value) {
 											echo "<option value='{$value['fietsFramemaat']}'>{$value['fietsFramemaat']}</option>";
@@ -74,7 +74,7 @@
 									</select>
 								</td>
 								<td>
-									<select name="category" class="form-control">
+									<select name="color" class="form-control">
 										<option disabled selected>Kleur</option>
 										<?php
 											foreach($getColor as $value) {
@@ -86,7 +86,7 @@
 							</tr>
 							<tr>
 								<td>
-									<select name="category" class="form-control">
+									<select name="minPrice" class="form-control">
 										<option disabled selected>Prijs van</option>
 										<?php for($teller=$minPrice; $teller<=$maxPrice; $teller += 50){
 											echo "<option value='{$teller}'>&euro;{$teller}</option>";
@@ -94,7 +94,7 @@
 									</select>
 								</td>
 								<td>
-									<select name="category" class="form-control">
+									<select name="maxPrice" class="form-control">
 										<option disabled selected>Tot</option>
 										<?php for($teller=$maxPrice; $teller>=$minPrice; $teller -= 50){
 											echo "<option value='{$teller}'>&euro;{$teller}</option>";
