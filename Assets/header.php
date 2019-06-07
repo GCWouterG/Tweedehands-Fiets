@@ -43,10 +43,10 @@
 				
 				<?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {?>
 					<a class="btn btn-primary" id="navAccount"><i class="fas fa-user"></i> Account</a>
-					<a class="btn btn-primary" id="navLogout"><i class="fas fa-sign-out-alt"></i> Log uit</a>
+					<a class="btn btn-primary" id="navLogout" href="logout.php"><i class="fas fa-sign-out-alt"></i> Log uit</a>
 				<?php } else {?>
-					<a class="btn btn-primary" id="navLogin"><i class="fas fa-unlock-alt"></i> Log in</a>
-					<a class="btn btn-primary" id="navRegister"><i class="fas fa-user-plus"></i> Registreer</a>
+					<a class="btn btn-primary" id="navLogin" href="login.php"><i class="fas fa-unlock-alt"></i> Log in</a>
+					<a class="btn btn-primary" id="navRegister" href="login.php"><i class="fas fa-user-plus"></i> Registreer</a>
 				<?php } ?>
 				
 			</div>	

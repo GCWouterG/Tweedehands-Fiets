@@ -24,6 +24,7 @@
 				$pass = $user->fetch_assoc()['klantWachtwoord'];
 				if(password_verify($_POST['pass'], $pass)) {
 					$_SESSION['loggedIn'] = true;
+					$_SESSION['userID'] = $user->fetch_assoc()['klantID'];
 					header('Location:'.$mainLink);
 				} else {
 					$loginErrorMessage = "Verkeerd wachtwoord";
@@ -36,21 +37,6 @@
 	
 
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Naamloos document</title>
-	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	
-	<link rel="stylesheet" type="text/css" href="Assets/login-style.css">
-	
-</head>
-
-<body>
 	<br> <br>
 	<div id="container">
 	<div class="row">
@@ -95,5 +81,3 @@
 	require('Assets/footer.php');
 	
 ?>
-</body>
-</html>
