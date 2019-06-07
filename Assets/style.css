@@ -381,7 +381,10 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 
-/*Media query's*/
+			/*///////////////////
+			////Media query's////
+			///////////////////*/
+
 @media screen and (max-width: 600px) {
 	#upperFooter .col {min-width: 90%; margin-top: 5%;}
 	#upperFooter {padding-bottom: 7.5%;}
@@ -424,4 +427,5 @@ input[type=range]::-webkit-slider-runnable-track {
 		height: 90vh;
 		width: 100%;
 	}
+	.homepageBikesWrapper {width: 100%;}
 }
