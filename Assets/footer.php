@@ -1,11 +1,15 @@
 	<footer id="upperFooter">
+		
 		<div class="row">
-			<div class="col">
+			<div class="col" id="footerLinks">
 				<h2>Links</h2>
-				<div class="footerDivider"></div>
 				<ul>
-					<li><a href="#">Melden</a></li>
+					<li><a href="#">Probleem melden</a></li>
+					<li><a href="#">Klantenservice</a></li>
+					<li><a href="#">Retourneren</a></li>
 					<li><a href="#">Sitemap</a></li>
+					<li><a href="#">Garantie</a></li>
+					<li><a href="#">Blog</a></li>
 				</ul>
 			</div>
 			<div class="verticalLine"></div>
@@ -30,12 +34,16 @@
 			</div>
 			</div>
 		</div>
+
 	</footer>
+
 	<footer id="lowerFooter">
+		
 		<span>&copy; <?php echo date("Y");?> - Tweedehands Fiets, alle rechten voorbehouden</span>
+		
 	</footer>
 	
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="Assets/script.js"></script>
