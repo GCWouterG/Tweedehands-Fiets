@@ -1,6 +1,6 @@
 <?php
 	$pageTitle = "Login";
-	require 'header.php';
+	require 'Assets/header.php';
 	
 
 	if(isset($_POST['registerSubmit'])) {
@@ -23,7 +23,8 @@
 			if($user->num_rows == 1) {
 				$pass = $user->fetch_assoc()['klantWachtwoord'];
 				if(password_verify($_POST['pass'], $pass)) {
-					echo "<script>alert('succesvol ingelogd');</script>";
+					$_SESSION['loggedIn'] = true;
+					header('Location:'.$mainLink);
 				} else {
 					$loginErrorMessage = "Verkeerd wachtwoord";
 				}
@@ -45,7 +46,7 @@
 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	
-	<link rel="stylesheet" type="text/css" href="login-style.css">
+	<link rel="stylesheet" type="text/css" href="Assets/login-style.css">
 	
 </head>
 
@@ -64,7 +65,7 @@
 				<form method="post">
 					<input type="email" class="form" placeholder="E-mailadres" name="email"> <br>
 					<input type="password" class="form" placeholder="Wachtwoord" name="pass"> <br>
-					<input type="submit" class="submit" name="loginSubmit" value="Login en ga verder">
+					<input type="submit" class="submit" name="loginSubmit" value="Login">
 				</form>
 			</section>
 		</div>
@@ -82,7 +83,7 @@
 					<input type="text" class="form" name="tussenvoegsel" placeholder="Tussenvoegsels" > <br>
 					<input type="text" class="form" name="achternaam" placeholder="Achternaam" required> <br>
 					<input type="password" class="form" name="wachtwoord" placeholder="Wachtwoord" required> <br>
-					<input type="submit" class="submit" name="registerSubmit" value="Registreer en ga verder">
+					<input type="submit" class="submit" name="registerSubmit" value="Registreer">
 				</form>	
 			</section>
 		</div>
@@ -91,7 +92,7 @@
 	
 <?php
 	
-	require 'footer.php';
+	require('Assets/footer.php');
 	
 ?>
 </body>
