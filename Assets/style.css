@@ -939,21 +939,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	}
 	#bikeSpecWrapper table {margin: 0 0 0 5%; display: inline-block;}
 	#bikeSpecWrapper table:first-of-type {margin: 2% 0 0 3%;}
-}
-
-@media screen and (min-width: 1400px) {
-	.prijs-td {
-		padding-top: 40px;
-		padding-right: 50px;
-	}
 	
-	.button-td {
-		padding-top: 35px;
-		padding-right: 15px;
-	}
-}
-	
-/*
 	#banner {height: auto;}
 	#banner img {width: 100%; display: block;}
 	#perfectBike {width: 50%; margin: 2%;}
@@ -973,4 +959,15 @@ input[type=range]::-webkit-slider-runnable-track {
 	}
 	.homepageBikesWrapper {width: 100%;}
 }
-*/
+
+@media screen and (min-width: 1400px) {
+	.prijs-td {
+		padding-top: 40px;
+		padding-right: 50px;
+	}
+	
+	.button-td {
+		padding-top: 35px;
+		padding-right: 15px;
+	}
+}
