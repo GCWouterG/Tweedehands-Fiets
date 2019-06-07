@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	require("connect.php");
-	$mainLink = "http://{$_SERVER['HTTP_HOST']}/Fietsensite/Tweedehands-Fiets";
+	$mainLink = "http://{$_SERVER['HTTP_HOST']}/School/Tweedehands-Fiets";
 
 	$getCategorysQuery = "SELECT * FROM categorieen";
     $getCategorys = $conn->query($getCategorysQuery);
@@ -33,6 +33,7 @@
 			<div id="buttonWrapper">
 				<?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {?>
 					<a class="btn btn-primary" id="navAccount"><i class="fas fa-user"></i> Account</a>
+					<a class="btn btn-primary" id="navLogout"><i class="fas fa-sign-out-alt"></i> Log uit</a>
 				<?php } else {?>
 					<a class="btn btn-primary" id="navLogin"><i class="fas fa-unlock-alt"></i> Log in</a>
 					<a class="btn btn-primary" id="navRegister"><i class="fas fa-user-plus"></i> Registreer</a>

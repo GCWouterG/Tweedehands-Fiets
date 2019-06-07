@@ -334,6 +334,46 @@ body{margin: 0; padding: 0;}
 	padding: 0.7% 0;
 }
 
+/*Search page*/
+#searchFilters {
+	margin: 1vh 0 0 50px;
+}
+#searchFilters h3 {
+	font-size: 1.3em;
+	float: left;
+}
+#searchFilters button {
+	background: none;
+	border: none;
+	color: #0066FF;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+#searchModal table {
+	width: 100%;
+}
+#searchModal td:first-of-type  {margin-left: 0;}
+#searchModal td  {
+	width: 48%;
+	margin: 0 0 1% 2%;
+	display: inline-block;
+}
+#searchModal td select {
+	width: 100%;
+}
+
+.searchFilter {
+	color: white;
+	background-color: #0066FF;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin-left: 0.5%;
+}
+.searchFilter b {
+	margin-right: 5px;
+}
+
 /*Media query's*/
 
 @media screen and (max-width: 600px) {
