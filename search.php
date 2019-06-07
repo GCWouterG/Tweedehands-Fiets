@@ -8,8 +8,6 @@
                 ON fietsen.staatID = staat.staatID
 				WHERE fietsen.fietsStatus = 'te koop'";
 
-	$bikes = $conn->query($getBikes);
-
 	if(isset($_SESSION['searchString'])) {
 		$getBikes .= "OR fietsen.fietsNaam LIKE '%{$_SESSION['searchString']}%'
 					OR fietsen.fietsBeschrijving LIKE '%{$_SESSION['searchString']}%'";
@@ -45,11 +43,15 @@
 	if(isset($_POST['searchSubmit'])) {
 		$searchFilters = array();
 		if(isset($_POST['searchString'])) {
-			$_SESSION['searchString'];
+			$_SESSION['searchString'] = $_POST['searchString'];
 		}
 		if(isset($_POST['category'])) {
 			$getBikes .= " AND fietsen.categorieID = {$_POST['category']}";
-			$searchFilters['Categorie'] = $_POST['category'];
+			
+			$getCategoryName = "SELECT categorieNaam FROM categorieen WHERE categorieID = {$_POST['category']}";
+			$categoryName = $conn->query($getCategoryName);
+			
+			$searchFilters['Categorie'] = $categoryName->fetch_assoc()['categorieNaam'];
 		}
 		if(isset($_POST['make'])) {
 			$getBikes .= " AND fietsen.fietsMerk = {$_POST['make']}";
@@ -76,7 +78,8 @@
 			$searchFilters['Maximum prijs'] = "&euro;".$_POST['maxPrice'];
 		}
 	}
-	
+
+	$bikes = $conn->query($getBikes);
 ?>
 	<div id="main">
 		<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
